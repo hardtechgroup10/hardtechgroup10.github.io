@@ -20,11 +20,11 @@ $enable-print-styles:       true;
 // Colors
 
 $theme-colors: (
-  primary: #9ACD32,
+  primary: white,
   secondary: #8e8e8e,
   light: #F5FFFA,
   dark: #555555,
-  info: #519F45,
+  info: black,
   success: #28a745,
   warning: #ffc107,
   danger: #dc3545
@@ -41,7 +41,7 @@ $link-color: #8e8e8e;
 
 
 // Fonts
-$font-family-base: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-base: Impact, Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
 $headings-font-family: $font-family-base;
 $display-font-family: $font-family-base;
