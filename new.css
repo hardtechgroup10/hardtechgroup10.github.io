@@ -6346,4 +6346,5 @@
 
   .top-fix {
     top: -85px;
+    height: 200px !important;
     position: absolute; }
