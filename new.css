@@ -2081,7 +2081,8 @@
   .collapse {
     display: none; }
     .collapse.show {
-      display: block; }
+      display: block; 
+      background: black; }
   
   tr.collapse.show {
     display: table-row; }
@@ -6345,6 +6346,6 @@
     background: none; }
 
   .top-fix {
-    top: -85px;
+    top: -96px;
     height: 200px !important;
     position: absolute; }
