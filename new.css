@@ -2081,8 +2081,7 @@
   .collapse {
     display: none; }
     .collapse.show {
-      display: block; 
-      background: black; }
+      display: block; }
   
   tr.collapse.show {
     display: table-row; }
@@ -6349,3 +6348,16 @@
     top: -96px;
     height: 200px !important;
     position: absolute; }
+
+  @media (max-width: 768px) {
+    .top-fix {
+      top: 0px;
+    }
+    nav {
+      position: fixed !important;
+      width: 100%;
+    }
+    .collapse.show {
+      background: #000;
+    }
+  }
