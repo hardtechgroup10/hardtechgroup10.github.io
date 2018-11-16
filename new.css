@@ -2649,7 +2649,7 @@
   .nav-link {
     display: block;
     font-size: larger;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.25rem;
     padding: 0.5rem 1rem; }
     .nav-link:hover, .nav-link:focus {
       text-decoration: none; }
@@ -6285,9 +6285,10 @@
     overflow: hidden; }
   
   .btn-pop {
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.25rem;
     width: fit-content !important; 
     background-color: rgba(252, 252, 252, 0); 
+    font-size: large;
     border: 1px solid;  }
   
   .send-button {
