@@ -6328,6 +6328,9 @@
       visibility: visible; 
       opacity: 1;}
   
+  .text-small {
+    font-size: small; }
+
   .text-large {
     font-size: large; }
 
@@ -6336,3 +6339,6 @@
 
   .text-xlarge {
     font-size: x-large; }
+
+  .navbar-transparent {
+    background: none; }
