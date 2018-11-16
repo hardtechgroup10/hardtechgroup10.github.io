@@ -143,12 +143,12 @@
     top: -.5em; }
   
   a {
-    color: #8e8e8e;
+    color: #000000;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects; }
     a:hover {
-      color: #686868;
+      color: #5a5a5a;
       text-decoration: underline; }
   
   a:not([href]):not([tabindex]) {
@@ -6261,7 +6261,7 @@
       width: 100%;
       height: 100%;
       content: ' ';
-      background: rgba(0, 0, 0, 0.5); }
+      background: rgba(0, 0, 0, 0.35); }
     
   .roboto {
     font-family: Roboto, Arial, Helvetica, sans-serif !important; }
@@ -6287,9 +6287,8 @@
   .btn-pop {
     letter-spacing: 0.2rem;
     width: fit-content !important; 
-    color: rgb(0, 0, 0);
     background-color: rgba(252, 252, 252, 0); 
-    border: 1px solid black;  }
+    border: 1px solid;  }
   
   .send-button {
     color: white;
@@ -6341,4 +6340,9 @@
     font-size: x-large; }
 
   .navbar-transparent {
+    color: rgba(0, 0, 0, 0) !important;
     background: none; }
+
+  .top-fix {
+    top: -85px;
+    position: absolute; }
