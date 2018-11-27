@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129023499-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129023499-1');
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>pleyco</title>
+  <meta name="description" content="bricks for kids">
+  <meta name="keywords" content="kids toy bricks fun">
+  <meta name="author" content="htg10">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+</head>
+
+<body class="top-fix">
+  <div id="overlay"></div>
+  <nav class="navbar navbar-expand-md impact navbar-dark sticky-top bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+              <img id="logo" class="img-fluid d-block" src="assets/img/logofinished-04.png">
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center justify-content-start heading" id="navbar2SupportedContent">
+          <a class="nav-link px-3 ml-5" href="index.html#how-it-works">
+            <b class="text text-white text-uppercase">how it works</b>
+          </a>
+          <a class="nav-link px-3" href="project.html">
+            <b class="text text-white text-uppercase">project</b>
+          </a>
+          <a class="nav-link px-3" href="about-us.html">
+            <b class="text text-white text-uppercase">about us</b>
+          </a>
+          <form class="navbar-form ml-2" role="search" action="/result.html">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter  Tracking  #" name="q">
+              <span class="input-group-btn">
+                <button type="submit" class="btn">
+                    <i class="fa fa-search fa-lg d-inline"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          </div>
+        </div>
+  </nav>
+  <div class="no-overflow">
+      <div class="row">
+        <div class="col-md"><div class="img-overlay-black">
+          <img class="img-fluid d-block img-reponsive" src="assets/img/BANNER-1.jpg"></div>
+        </div>
+      </div>
+</div>
+ 
+  <div class="m-2 py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="my-3 text-uppercase impact heading"><b>Build Up Nepal</b></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="roboto text-nextline">Build up Nepal is an organisation which aims to find cheap and easy ways to build high-quality houses from local materials, by local people, that are able to withstand earthquakes. The organisation was founded after the 2015 earthquake which destroyed many homes, especially in poorer regions and killed approximately 2600 people and hurt among 14000. </p>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="mx-3 px-4">
+    <div id="mapid" style="width: 100%; height: 500px;"></div>
+  </div>
+    <script>
+
+        var mymap = L.map('mapid').setView([27.685, 85.318], 14);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+        var marker = L.marker([27.680826, 85.324380]).addTo(mymap);
+        marker.bindPopup("<b>Build Up Nepal</b><br>140 people impacted").openPopup();
+
+    </script>
+    <div class="px-2 pt-5 text-right">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-3 col-md-4">
+            <a onclick="googleButton();" href="https://goo.gl/forms/ZYSaDgLCwiAAaAPY2" class="m-2 mb-4 btn-pop btn justify-content-center align-items-center text-uppercase impact mt-2">make a change</a>
+        </div>
+        <div class="col-lg-6 col-md-4">
+            <p class="text-uppercase roboto"><b>contact us</b></p>
+            <p>hardtech.group10@gmail.com</p>
+        </div>
+        <div class="col-lg-3 col-md-4">
+            <p class="text-uppercase roboto"><b>pleyco</b></p>
+            <p>Copyright - 2018 HTG10</p>
+        </div>
+        </div>
+    </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="essential.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

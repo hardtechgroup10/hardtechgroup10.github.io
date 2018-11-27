@@ -6351,13 +6351,15 @@
 
   @media (max-width: 768px) {
     .top-fix {
-      top: 0px;
-    }
+      top: 0px; } 
+
     nav {
       position: fixed !important;
-      width: 100%;
-    }
+      width: 100%; }
+
     .collapse.show {
-      background: #000;
-    }
-  }
+      background: #000; }}
+
+  .navbar-form {
+    padding: 22px 20px 22px 40px; }
+    
