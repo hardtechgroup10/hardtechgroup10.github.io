@@ -36,7 +36,7 @@ $(function() {
             $('.top-fix').css({
                 'top' : '-' + $('nav').outerHeight() + 'px'
             });
-            $('#logo').replaceWith('<img id="logo" class="img-fluid d-block" src="assets/img/logofinished-03.png">');
+            $('#logo').replaceWith('<img id="logo" class="img-fluid d-block" src="assets/img/logofinished-04-copy.png">');
         } else { //wider than 767px here
             $('.top-fix').css({ //loop through each element with the .top-fix class
                 'top' : '-' + $('nav').outerHeight() - $('div#navbar2SupportedContent.show') + 'px' //adjust the css rule for margin-top to equal the element height - 10px and add the measurement unit "px" for valid CSS
@@ -48,10 +48,6 @@ $(function() {
         }
     }).resize();   // Cause an initial widow.resize to occur
 });
-
-function myFunction () {
-    window.location.replace("http://stackoverflow.com");
-}
 
 // Wait for the page to load first
 /* window.onload = function() {
